@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Rose Test App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="title">Convert</div>
+      <div>
+        <div class="input-container">
+          <label for="distance">Distance:</label>
+          <input type="number" id="distance" placeholder="Enter value" />
+          <select id="unit-from">
+            <option value="m">meters</option>
+            <option value="cm">centimeters</option>
+            <option value="in">inches</option>
+            <option value="ft">feet</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="convert-to">Convert to:</label>
+          <select id="unit-to">
+            <option value="m">meters</option>
+            <option value="cm">centimeters</option>
+            <option value="in">inches</option>
+            <option value="ft">feet</option>
+          </select>
+        </div>
+        <button id="convert_button">Convert</button>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="title">Second task: Data Processing App</div>
+      <div>
+        <label for="data">Data (JSON):</label><br />
+        <textarea id="data" rows="4" cols="50">
+    {
+      "data": [
+        {"user": "mike@mail.com", "rating": 20, "disabled": false},
+        {"user": "greg@mail.com", "rating": 14, "disabled": false},
+        {"user": "john@mail.com", "rating": 25, "disabled": true}
+      ],
+      "condition": {
+        "exclude": [{"disabled": true}],
+        "sort_by": ["rating"]
+      }
+    }
+  </textarea
+        ><br />
+
+        <label for="condition">Condition (JSON):</label><br />
+        <textarea id="condition" rows="4" cols="50">
+    {
+      "exclude": [{"disabled": true}],
+      "sort_by": ["rating"]
+    }
+  </textarea
+        ><br />
+
+        <button onclick="processData()">Process Data</button><br />
+
+        <h2>Result:</h2>
+        <pre id="result2"></pre>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="title">Therd task: Search Algorithm</div>
+      <div>
+        <p id="output"></p>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="second.js"></script>
+    <script src="therd.js"></script>
+  </body>
+</html>
